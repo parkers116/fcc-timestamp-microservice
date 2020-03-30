@@ -32,7 +32,7 @@ app.get("/api/timestamp/:date_string", function(req, res) {
   let date = new Date(req.params.date_string);
 
   if (isNaN(date.getTime())) {
-    date = new Date(parseInt(req.params.date_string) * 1000);
+    date = new Date(parseInt(req.params.date_string));
   }
 
   if (isNaN(date.getTime())) {
